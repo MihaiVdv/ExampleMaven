@@ -1,0 +1,8 @@
+Animate in here {{mesaj}}
+        <div ng-controller="AnimateController as animate">
+            <button ng-click="animate.toggle = ! animate.toggle">Toggle animation</button>
+
+            <div class="toggle" ng-if="animate.toggle">
+                    Something to fade
+            </div>
+        </div>

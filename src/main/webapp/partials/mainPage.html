@@ -1,0 +1,32 @@
+Main Page si mesaj: {{mesaj}}
+
+        <br/><br/>
+        Controller scope inhr:
+        <br/>
+        <div ng-controller="Ctrl1">
+            <input type="text" ng-model="ctrl">
+            <div ng-controller="Ctrl2">
+                <input type="text" ng-model="ctrl">
+            </div>
+        </div>
+
+        <script>
+            function Ctrl1($scope){};
+            function Ctrl2($scope){};
+        </script>
+
+
+        <br/>
+        Directive scope inheritance (Obj.model):
+        <br/>
+        <my-first-inh>
+        </my-first-inh>
+
+        <br/>
+        Directive scope inheritance - transclude:
+        <br/>
+        <my-first-transclude>
+            <my-second-transclude>
+
+            </my-second-transclude>
+        </my-first-transclude>

@@ -1,0 +1,59 @@
+<div class="text-success bg-danger">Http get:</div>
+
+<div ng-controller="HttpController as httpCtrl">
+
+        Filter: <input type="text" ng-model="query">
+        <table class="table table-striped">
+            <tr ng-repeat="account in accounts | filter: query">
+                <td>{{account.id}}</td>
+                <td>{{account.email}}</td>
+                <td>{{account.password}}</td>
+                <td>{{account.userName}}</td>
+            </tr>
+        </table>
+
+    
+    <div class="text-success bg-danger">Http post:</div>
+        <form name="myForm" class="col-md-12">
+            <div class="col-md-1">Id:</div>
+            <input type="text" name="accountId"
+                   ng-disabled="true"
+                   ng-model="myForm.account.id"
+                >
+            <br>
+
+            <div class="col-md-1">Email:</div>
+            <input type="email" name="accountEmail"
+                    placeholder="Email"
+                    ng-model="myForm.account.email"
+                    required
+                    >
+            <span class="text-danger" ng-show="myForm.accountEmail.$error.email">Not valid email</span>
+            <br>
+
+            <div class="col-md-1">Password:</div>
+            <input type="password" name="accountPassword"
+                        placeholder="Password"
+                        ng-model="myForm.account.password"
+                        ng-minlength="3"
+                        ng-maxlength="20"
+                        required
+                    >
+            <span class="text-danger" ng-show="myForm.accountPassword.$error.minlength">Too short</span>
+            <span class="text-danger" ng-show="myForm.accountPassword.$error.maxlength">Too long</span>
+
+            <br>
+
+            <div class="col-md-1">User name:</div>
+            <input type="text" name="accountUserName"
+                        placeholder="Username"
+                        name-keys
+                        ng-model="myForm.account.userName"
+                        ng-change="httpCtrl.usernameChange()"
+                        required
+                    >
+            <span class="text-danger">Changes:{{httpCtrl.number}}</span>
+        </form>
+        <button class="btn btn-primary" ng-click="httpCtrl.saveAccount(myForm,myForm.account)" ng-disabled="!(myForm.$valid)">Post</button>
+
+</div>

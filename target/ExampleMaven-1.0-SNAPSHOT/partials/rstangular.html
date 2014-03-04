@@ -1,0 +1,42 @@
+RstAng page: {{mesaj}}
+        <br/>
+Filter: <input type="text" ng-model="query">
+<table class="table table-striped">
+    <tr ng-repeat="person in persons | filter: query">
+        <td>{{person.id}}</td>
+        <td>{{person.firstName}}</td>
+        <td>{{person.lastName}}</td>
+    </tr>
+</table>
+
+
+<div class="text-success bg-danger">Restangular post:</div>
+<form name="myForm" class="col-md-12">
+    <div class="col-md-1">Id:</div>
+    <input type="text" name="personId"
+           ng-disabled="true"
+           ng-model="myForm.person.id"
+            >
+    <br>
+
+    <div class="col-md-1">FirstName:</div>
+    <input type="text"
+           ng-model="myForm.person.firstName"
+           required
+            >
+    <br>
+
+    <div class="col-md-1">LastName:</div>
+    <input type="text"
+           ng-model="myForm.person.lastName"
+           required
+            >
+    <br>
+</form>
+<button class="btn btn-primary" ng-click="savePerson(myForm.person); myForm.$setPristine()" ng-disabled="!(myForm.$valid)">Post</button>
+
+
+    <br/>
+     Delete id:
+    <input type="text" ng-model="deleteId">
+        <button class="btn btn-warning" ng-click="deletePerson(deleteId); deleteId = ''">Delete</button>

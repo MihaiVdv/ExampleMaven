@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Booyah</title>
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/toastr.min.css">
+    <link rel="stylesheet" href="styles/ng-grid.css">
+    <link rel="stylesheet" href="styles/sortable.css">
+</head>
+<body  ng-app="myApp" ng-controller="AppController">
+
+    <error></error>
+
+    <div ng-controller="ButtonsController as button">
+        <button class="btn btn-primary" ng-click='button.changeRoute("")'>Home</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("page")'>Pages</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("promise")'>Promise</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("providerExample")'>ProviderExample</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("ngRepeat")'>ngRepeat</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("directiveCommunication")'>Directive communication</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("animate")'>Animate</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("fadeAngular")'>FadeAngular</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("copy")'>Copy</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("http")'>Http-Resource-Q Accounts</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("rstangular")'>Restangular Persons</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("simpleAnimation")'>Simple animation</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("pluralize")'>Pluralize</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("compile")'>Compile</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("cmplDirective")'>Compiled directive</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("ngDirective")'>NG directives</button>
+        <button class="btn btn-danger" ng-click='button.changeRoute("block")'>Block</button>
+        <button class="btn btn-danger" ng-click='button.changeRoute("crash")'>Crash</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("accordion")'>UI-Accordion</button>
+        <button class="btn btn-warning" ng-click='button.changeRoute("uiButtons")'>UI-Buttons</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiCarousel")'>UI-Carousel</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiToggle")'>UI-Toggle</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiDatepicker")'>UI-Datepicker</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiModal")'>UI-Modal</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiTypeahead")'>UI-Typeahead</button>
+        <button class="btn btn-primary" ng-click='button.changeRoute("uiSortable")'>UI-Sortable</button>
+    </div>
+    <br/>
+    <ng-view></ng-view>
+
+    <script type="text/javascript" src="scripts/javascript.js"></script>
+    <script type="text/javascript" src="library/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="library/lodash.min.js"></script>
+    <script type="text/javascript" src="library/toastr.min.js"></script>
+    <script type="text/javascript" src="library/TweenMax.js"></script>
+
+    <script type="text/javascript" src="library/angular.js"></script>
+    <script type="text/javascript" src="library/angular-route.js"></script>
+    <script type="text/javascript" src="library/angular-animate.js"></script>
+    <script type="text/javascript" src="library/angular-resource.js"></script>
+    <script type="text/javascript" src="library/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script type="text/javascript" src="library/ng-grid-2.0.7.min.js"></script>
+    <script type="text/javascript" src="library/restangular.js"></script>
+
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="scripts/directive.js"></script>
+    <script type="text/javascript" src="scripts/controllers.js"></script>
+    <script type="text/javascript" src="scripts/services.js"></script>
+
+</body>
+</html>

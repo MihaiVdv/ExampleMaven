@@ -1,0 +1,12 @@
+ng-repeat page. mesaj: {{mesaj}}
+
+        <div
+                ng-repeat-start="item in 'cuvant'.split('')"
+                ng-click="ev = $event"
+                >
+            {{$index + 1}}. {{item}}
+            {{ev.pageY}}
+
+        </div>
+        Something here to repeat
+        <div ng-repeat-end>  {{item}}</div>

@@ -1,0 +1,21 @@
+Accordion page {{mesaj}}:
+<br/>
+    <div>
+
+            <label class="checkbox">
+            <input type="checkbox" ng-model="oneAtATime">
+            Open only one at a time
+        </label>
+        <accordion close-others="oneAtATime" checked>
+            <accordion-group heading="Static Header 1" is-open="true">
+                Content 1
+            </accordion-group>
+            <accordion-group heading="Static Header 2">
+                Content 2
+            </accordion-group>
+            <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                {{group.content}}
+            </accordion-group>
+        </accordion>
+
+    </div>

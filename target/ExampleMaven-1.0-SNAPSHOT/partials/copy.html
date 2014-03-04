@@ -1,0 +1,18 @@
+Copy page: {{mesaj}}
+
+        <div ng-controller="CopyController as ctrl">
+
+            <form>
+                <input type="text" ng-model="ctrl.contactCopy.firstName"/>
+                <button ng-click="ctrl.saveContact()">Save</button>
+            </form>
+
+            <table class="table table-striped">
+                <tr ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact(contact)">
+                    <td>{{contact.firstName}}</td>
+                    <td>{{contact.lastName}}</td>
+                    <td>{{contact.phone}}</td>
+                </tr>
+            </table>
+
+        </div>

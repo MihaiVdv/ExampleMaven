@@ -1,0 +1,48 @@
+.toggle{
+    -webkit-transition: linear 1s;
+    -moz-transition: linear 1s;
+    -ms-transition: linear 1s;
+    -o-transition: linear 1s;
+    transition: linear 1s;
+}
+
+.toggle.ng-enter{
+    opacity: 0;
+}
+
+.toggle.ng-enter-active{
+    opacity: 1;
+}
+
+.toggle.ng-leave{
+    opacity: 1;
+}
+
+.toggle.ng-leave-active{
+    opacity: 0;
+}
+
+.animate-hide{
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.animate-hide.ng-hide-add,
+.animate-hide.ng-hide-remove{
+    display: block !important;
+}
+
+.animate-hide.ng-hide{
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+}
+
+.check-element{
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}

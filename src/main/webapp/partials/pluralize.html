@@ -1,0 +1,28 @@
+Pluralize {{mesaj}}
+<br/><br/>
+Pers 1: <br/><input type="text" ng-model="person1"><br/>
+Pers 2: <br/><input type="text" ng-model="person2"><br/>
+Number of People: <input type="text" ng-model="personCount"><br/>
+
+
+        Without offset:
+        <ng-pluralize count="personCount"
+                      when="{
+                        '0' : 'Nimeni nu e online',
+                        'one' : '1 e online',
+                        'other' : '{} persoane online'
+                      }">
+        </ng-pluralize>
+
+        <br/>
+
+        With offset(2):
+        <ng-pluralize count="personCount" offset=2
+                      when="{
+                                '0' : 'Nimeni nu e online',
+                                '1' : '{{person1}} e online',
+                                '2' : '{{person1}} si {{person2}} sunt online',
+                                'one' : '{{person1}}, {{person2}} si inca unu e online',
+                                'other' : '{{person1}}, {{person2}} si {} persoane online'
+                              }">
+        </ng-pluralize>

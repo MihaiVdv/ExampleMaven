@@ -1,0 +1,10 @@
+input.ng-invalid.ng-dirty{
+    background-color: pink
+}
+
+.gridStyle {
+    border: 1px solid red;
+    height: 300px;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

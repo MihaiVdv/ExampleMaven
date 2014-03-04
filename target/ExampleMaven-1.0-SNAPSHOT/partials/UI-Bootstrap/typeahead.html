@@ -1,0 +1,20 @@
+Typeahead {{mesaj}}:
+<br/>
+        <div>
+            <h4>Asyncronous results:</h4>
+            <pre>Model: {{asyncSelected}}</pre>
+            <input type="text"
+                   ng-model="asyncSelected"
+                   typeahead="person for person in getPersons()"
+                   typeahead-loading="loadingPersons"
+                   typeahead-wait-ms="100"
+                   class="form-control"
+                    >
+            <i ng-show="loadingPersons" class="glyphicon-refresh"></i>
+        </div>
+
+        <h4>Static arrays</h4>
+        <pre>Model: {{selected | json}}</pre>
+        <input type="text" ng-model="selected"
+               typeahead="state for state in states | filter:$viewValue "
+               class="form-control">

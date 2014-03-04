@@ -1,0 +1,11 @@
+Page {{mesaj}}
+
+        <br/>
+        Ng-repeat
+        <input type="text" ng-model="ctrl">
+        <div ng-repeat="word in 'asdfghj'.slice()">
+            <locale-dir-page word="word">locale-dir::</locale-dir-page>
+            {{$index}} -- {{word}} -- mesaj: {{mesaj}}
+            <input type="text" ng-model="ctrl">
+
+        </div>
